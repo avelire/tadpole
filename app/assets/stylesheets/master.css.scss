@@ -14,7 +14,9 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 }
+
 /* Helvetica/Arial-based sans serif stack */
+
 body {
 	background: url('/assets/subtle_white_feathers.png');
 	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,4 +27,10 @@ body {
 	background:url('/assets/wood_1.png');
 	border-radius: 0;
 	box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #C9F59D;
+	font-family: 'landlieberegular', sans-serif;
+  	font-size: 26px;
 }
