@@ -29,7 +29,12 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
+gem 'simple_form'
+
 gem 'autoprefixer-rails'
+
+# Gemfile for Rails 3+, paginate plugin
+gem 'will_paginate', '~> 3.0.5'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
