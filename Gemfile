@@ -31,6 +31,8 @@ gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'simple_form'
 
+gem 'devise', '>= 3.2.4'
+
 gem 'autoprefixer-rails'
 
 # Gemfile for Rails 3+, paginate plugin
