@@ -38,6 +38,12 @@ gem 'autoprefixer-rails'
 # Gemfile for Rails 3+, paginate plugin
 gem 'will_paginate', '~> 3.0.5'
 
+# for displaying maps and locations
+gem "geocoder"
+
+# for storing sensitive info
+gem "figaro", ">= 1.0.0"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
