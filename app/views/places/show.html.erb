@@ -74,6 +74,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </div>
 <div class="clear"></div>
 
+
+
 	<% @place.comments.each do |comment| %>
 			<div class="col-xs-12 col-sm-6">
 				<blockquote>
@@ -86,4 +88,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 			</div>
 		<% end %>
 
+
+	<div class="clear"></div>
+	<%= simple_form_for @photo, :url => place_photos_path(@place) do |pic| %>
+  		<%= pic.input :picture %>
+  		<%= pic.input :caption %>
+  		<%= pic.submit "Add a photo", :class => 'btn btn-primary' %>
+	<% end %>
+
+<h1>Photos</h1>
+
+<% @place.photos.each do |pic| %>
+  <div><b><%= image_tag pic.picture_url(:thumb).to_s %></b> -
+      	<%= pic.caption %>
+  </div>
+<% end %>
 	

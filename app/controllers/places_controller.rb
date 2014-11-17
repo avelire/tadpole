@@ -3,9 +3,7 @@ class PlacesController < ApplicationController
 
 	def index
 		@places = Place.all
-		@places = Place.paginate :per_page => 5, :page => params[:page],
-								 :conditions => ['name like ?', "%#{params[:search]}%"],
-								 :order => 'name'
+		@places = Place.search(params[:search], params[:page])
 	end
 
 	def new
@@ -24,6 +22,7 @@ class PlacesController < ApplicationController
 	def show
 		@place = Place.find(params[:id])
 		@comment = Comment.new
+		@photo = Photo.new
 	end
 
 	def edit
