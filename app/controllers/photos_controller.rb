@@ -2,7 +2,8 @@ class PhotosController < ApplicationController
 	before_action :authenticate_user!
 	def create
 		@place = Place.find(params[:place_id])
-		@place.photos.create(photo_params)
+		@photo = @place.photos.create(photo_params)
+		# raise @photo.errors.to_json
 		redirect_to place_path(@place)
 	end
 
