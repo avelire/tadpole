@@ -65,6 +65,10 @@
 					<small><%= place.comments.last.user.email %></small>
 				</blockquote>
 
+		<% if place.photos.present? %>
+			 <b><%= image_tag place.photos.order("id ASC").last.picture, :class => 'img-responsive' %></b> 
+			 
+		<% end %>
 			</div>
 
 		<% end %>
